@@ -2,7 +2,7 @@ package com.att.contentintelligence
 
 import org.apache.spark.sql.DataFrame
 import org.apache.spark.sql.SparkSession
-//import com.att.contentintelligence.util.genericUtilities
+
 object HiveUtility {
 
   /*
