@@ -1,0 +1,21 @@
+Navigate to the windows path in the installed confluent dir 
+in this case :
+E:\confluentkafka\confluent-5.5.0\bin\windows
+
+1. Zookeeper-start command
+zookeeper-server-start.bat E:\confluentkafka\confluent-5.5.0\etc\kafka\zookeeper-properties
+
+2. Kafka start command
+kafka-server-start.bat E:\confluentkafka\confluent-5.5.0\etc\kafka\server-properties
+
+3. Schema registry start command :
+Failed , still have to look into this
+
+4. Kafka topic creation command :
+kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
+
+5. Kafka producer command :
+kafka-console-producer.bat --broker-list localhost:9092 --topic test
+
+6. Kafka consumer command :
+kafka-console-consumer.bat --zookeeper localhost:2181  --topic test
